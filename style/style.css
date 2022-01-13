@@ -1,0 +1,127 @@
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: rgb(56, 41, 224);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+
+html ,body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-color:var(--Pale-blue);
+    box-sizing: border-box;
+    margin: 0;
+    
+    
+}
+.container{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+.order{
+    background-color: var(--Very-pale-blue);
+    width: 400px;
+    height: 550px;
+    padding: 0;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+.hero-img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.order-summary{
+    padding: 20px;
+    padding-bottom: 0;
+}
+.order-summary h3{
+    color: var(--Dark-blue);
+}
+.order-summary p{
+    font-size: 16px;
+    color: var(--Desaturated-blue);
+}
+
+.plan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.plan img{
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+}
+.plan >div {
+    flex-basis: 30%;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+.plan > a{
+    flex-basis: 30%;
+    flex-shrink: 1;
+    margin-left: auto;
+}
+.plan h4{
+    margin-bottom: 0;
+}
+.plan p{
+    margin-top: 0;
+    color: var(--Desaturated-blue);
+}
+.plan a{
+    font-size: 14px;
+    
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--Bright-blue);
+}
+.plan a:hover{
+    text-decoration: none;
+    color: rgba(56, 41, 224, 0.664);
+}
+.payment{
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.payment :nth-child(1){
+    background-color:var(--Bright-blue);
+    color: var(--Pale-blue);
+    padding: 15px;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.payment :nth-child(2){
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--Desaturated-blue);
+}
+.payment :nth-child(1):hover{
+    background-color:rgba(56, 41, 224, 0.664); 
+    cursor: pointer;
+}
+.payment :nth-child(2):hover{
+    color: var(--Dark-blue);
+
+}
+@media all and (mix-width:375px){
+    .order{
+        background-image: url(../images/pattern-background-mobile.svg);
+    }
+}
